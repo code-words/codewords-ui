@@ -38,6 +38,6 @@ let wrapper = shallow(<App cable= {mockFn}/>);
     const spy = jest.spyOn(wrapper.instance(), "setPlayer")
     wrapper.instance().dataSwitch({type: 'player-joined', data:{playerRoster:["1", "2"]}});
     expect(spy).toHaveBeenCalled();
-
   })
+
 })

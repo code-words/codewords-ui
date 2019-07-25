@@ -8,7 +8,6 @@ class Card extends Component {
   
 	render() {
 		const { card, isActive, isHover } = this.props;
-		console.log(isHover)
     const { type, flipped, word, id } = card;
 		const intelCls = type ? type : '';
 		const clickCls = !type && isActive && !flipped ? 'clickable' : null;
