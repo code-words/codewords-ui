@@ -9,6 +9,7 @@ describe('AgentHUD', () => {
     hint={{hintWord: 'hello'}}
     remainingAttempts={3}
   />)
+
     it('should match snapshot', () => {
         expect(wrapper).toMatchSnapshot()
     });
