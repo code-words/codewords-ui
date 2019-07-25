@@ -1,28 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Board Should render Component 1`] = `
-"<Board userName=\\"test\\" cardData={{...}}>
-  <section className=\\"Board\\">
-    <h2 className=\\"turn-status\\">
-      Agent (
-      TEST
-      ) Status:
-      <span className=\\"Inactive\\">
-         
-        Inactive
-      </span>
-    </h2>
-    <div className=\\"gameboard\\">
-      <Card card={{...}} id={1} isHover={[undefined]} isActive={[undefined]} sendGuess={[undefined]}>
-        <article className=\\"card front  null undefined-hover\\" id={1} name=\\"fml\\" onClick={[Function]}>
-          <div className=\\"word-bg\\">
-            <p className=\\"word-txt\\">
-              fml
-            </p>
-          </div>
-        </article>
-      </Card>
-    </div>
-  </section>
-</Board>"
-`;
+exports[`Board should match component snapshot 1`] = `undefined`;
