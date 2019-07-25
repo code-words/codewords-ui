@@ -1,5 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`JoinGame should match component snapshot 1`] = `ShallowWrapper {}`;
-
 exports[`JoinGame should matchsnapShot 1`] = `ShallowWrapper {}`;
