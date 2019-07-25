@@ -1,68 +1,120 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+## Table of contents
+* [Intro](#CodeWords)
+* [Screenshots](#Screenshots)
+* [Getting Started](#Getting-Started)
+* [How to Use](#How-to-Use)
+* [Project Emphasis](#Project-Emphasis)
+* [UI Design](#UI-Design)
+* [Future Plans](#Future-Plans)
+* [License](#License)
 
-### `npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Palette Pal App
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+This app was created by <a href="https://github.com/joequincy">Jon Peterson</a>, <a href="https://github.com/rdren0">Rachael Drennan</a>, <a href="https://github.com/siimonstark">Justin Pyktel</a>, and <a href="https://github.com/lynnerang">Lynne Rang</a>.
 
-### `npm test`
+This project is a Turing cross-pollination project between students of the frontend and backend programs, primarily focused on working with React and ActionCable websockets implementation on the frontend and Ruby on Rails and ActionCable websockets definition on the back-end.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This app is based on the game Code Names from the Hitchhikers Guide to the Galaxy novel (with an added Archer theme), and it allows four players to join a game from four different client machines and play against each other on two teams.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Screenshots
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+![New game](/screenshots/1.png)
+![Lobby](/screenshots/2.png)
+![Gameplay as hinter](/screenshots/3.png)
+![Gameplay as guesser](/screenshots/4.png)
+![Mid-game](/screenshots/5.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+You can view this application live on Heroku at: https://codewords-ui.herokuapp.com/ !
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+OR
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+If you'd like to clone this repository to your own local machine, run the following commands in your terminal:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```shell
+git clone https://github.com/code-words/codewords-ui.git
+git clone https://github.com/code-words/codewords-server.git
+```
 
-## Learn More
+For the server repo, run the following commands:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. ```bundle install``` to install dependencies
+2. Prepare database with ```rails db:create```
+3. Migrate with ```rails db:migrate```
+4. Seed with ```rails db:seed```
+5. Start the server with ```rails s```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Then for the ui repo, run the following commands:
 
-### Code Splitting
+1. ```npm install``` to install dependencies
+2. Start the server with ```npm start```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
+Then, go to `http://localhost:3001/` to see the code running in the browser.  
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+---
 
-### Making a Progressive Web App
+## How to Use
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+1. Create a new game for your friends (or your three other browser tabs) to join!
+2. Click the invite code to copy it and send to others to join your existing game.
+3. Once all four players have joined, click "Continue" to start the game.  You can see who is on what team in the scoreboards to each side of the game board.
+4. A player from each team will play the intel, and they will be able to see which cards are on their own team that they want their partner to guess.
+5. One of the intel players will be chosen to go first, and they can enter a hint and indicate how many cards on the table are relate to that hint.  Be careful not to enter a word on the board, a word that relates to the other team's cards, or a word assigned to the assassin (instant death)!
+6. The guesser on that same team can now enter guesses until they choose a bystander (no points), choose a card of the opposite team's (point for the other team), their total guesses run out, or they choose the assassin card (game over!).  In all cases other than ending the game with the assassin or all of one team's cards are guessed, it will then be the other team's turn.
+7. The first team to have all their words guessed wins!
 
-### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## UI Design
 
-### Deployment
+Given the limited time frame, we created a high-fidelity prototype of the design on Figma to have a more detailed idea of where we wanted everything to go on the different pages.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+![Figma designs](/screenshots/7.png)
 
-### `npm run build` fails to minify
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Future Plans
+
+We plan to keep working on this to add more features like the following:
+- The option to choose a male or female agent image
+- An ongoing record of all hints displayed for guessers
+- The option to choose your team on game setup
+- A inactivity timer, or timer that resctricts how long each turn is.
+
+
+## Project Emphasis
+
+View the project specification on the <a href="https://frontend.turing.io/projects/capstone.html">Turing webpage for this project</a>.
+
+### Front-End
+- [x] ActiveCable websockets
+- [x] SCSS
+- [x] Flex-box
+- [x] Grid CSS
+- [x] UI design
+- [x] React
+- [x] React router
+- [x] Es6 classes
+- [x] Async JavaScript
+- [x] API fetches
+- [x] Enzyme & Jest testing
+- [x] Webpack
+- [x] NPM
+
+### Back-end
+- [x] Ruby on Rails
+- [x] ActionCable websockets
+- [x] Relational Databases
+- [x] SQL
+- [x] Postgres
+- [x] User Authentication
+
+
+## Licensing
+
+All credit goes to <a href="turing.io">Turing School of Software</a> for providing the project specifications.
