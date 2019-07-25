@@ -43,7 +43,8 @@
       "src/**/*.{js,jsx}",
       "!src/index.js",
       "!src/serviceWorker.js",
-      "!src/mock/mockData.js"
+      "!src/mock/mockData.js",
+      "!src/variables/index.js"
     ]
   }
 }
