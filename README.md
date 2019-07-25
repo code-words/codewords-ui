@@ -11,7 +11,7 @@
 * [License](#License)
 
 
-# Palette Pal App
+# CodeWords
 
 This app was created by <a href="https://github.com/joequincy">Jon Peterson</a>, <a href="https://github.com/rdren0">Rachael Drennan</a>, <a href="https://github.com/siimonstark">Justin Pyktel</a>, and <a href="https://github.com/lynnerang">Lynne Rang</a>.
 
