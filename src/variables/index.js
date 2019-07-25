@@ -13,8 +13,6 @@ switch (window.location.hostname) {
     GAME_HOST = window.location.hostname.replace('game', 'server');
 }
 
-console.dir(process.env);
-
 export const API_ROOT = `http${SECURE}://${GAME_HOST}/api`;
 export const API_WS_ROOT = `ws${SECURE}://${GAME_HOST}/cable`;
 export const HEADERS = {
