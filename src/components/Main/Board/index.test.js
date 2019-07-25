@@ -1,20 +1,18 @@
 import React from 'react';
 import Board from './index';
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 
 describe('Board', () => {
-  let test = "test"
-  let wrapper;
-  let instance;
-
-  beforeEach(() => {
-    wrapper = shallow(<Board userName="Lynne" cardData={[{id: 1, word: 'fml'}]}/>);
-    instance = wrapper.instance();
-
-  })
-
+  let test = "test";
+   let wrapper = shallow(<Board userName="Lynne" cardData={[{id: 1, word: 'fml'}]}/>);
   it('should match component snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-})
+  it('Should render Component', () => {	
+    const wrapper = mount(<Board userName={test} cardData={[{id: 1, word: 'fml'}]}/>);	
+    expect(wrapper.debug()).toMatchSnapshot();	
+  });
+
+
+});
