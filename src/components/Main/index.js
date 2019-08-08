@@ -7,19 +7,22 @@ import AgentInput from './AgentInput';
 import AgentHUD from './AgentHUD';
 
 const Main = props => {
-  const form = props.isActive && props.isIntel
-    ? ( <AgentInput 
-          websocket={props.websocket} 
-          hintLogs={props.hintLogs} 
-          cable={props.cable} 
-          isActive={props.isActive} />
-      )
-    : ( <AgentHUD 
-          isActive={props.isActive}
-          hint={props.hint}
-          remainingAttempts={props.remainingAttempts}
-        />
-      );
+  const form =
+    props.isActive && props.isIntel ? (
+      <AgentInput
+        websocket={props.websocket}
+        hintLogs={props.hintLogs}
+        cable={props.cable}
+        isActive={props.isActive}
+      />
+    ) : (
+      <AgentHUD
+        isActive={props.isActive}
+        hint={props.hint}
+        remainingAttempts={props.remainingAttempts}
+        sendGuess={props.sendGuess}
+      />
+    );
       
   const determineActivePlayer= () => {
     let isCurrent = props.players.find(p =>{

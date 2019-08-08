@@ -1,23 +1,25 @@
 
 
 ## Table of contents
-* [Intro](#CodeWords)
-* [Screenshots](#Screenshots)
-* [Getting Started](#Getting-Started)
-* [How to Use](#How-to-Use)
-* [Project Emphasis](#Project-Emphasis)
-* [UI Design](#UI-Design)
-* [Future Plans](#Future-Plans)
-* [License](#License)
+- [CodeWords ![Build Status](https://travis-ci.com/code-words/codewords-ui)](#codewords-build-statushttpstravis-cicomcode-wordscodewords-ui)
+  - [Screenshots](#screenshots)
+  - [Getting Started](#getting-started)
+  - [How to Use](#how-to-use)
+  - [UI Design](#ui-design)
+  - [Future Plans](#future-plans)
+  - [Project Emphasis](#project-emphasis)
+    - [Front-End](#front-end)
+    - [Back-end](#back-end)
+  - [Licensing](#licensing)
 
 
-# CodeWords
+# CodeWords [![Build Status](https://travis-ci.com/code-words/codewords-ui.svg?branch=master)](https://travis-ci.com/code-words/codewords-ui)
 
 This app was created by <a href="https://github.com/joequincy">Jon Peterson</a>, <a href="https://github.com/rdren0">Rachael Drennan</a>, <a href="https://github.com/siimonstark">Justin Pyktel</a>, and <a href="https://github.com/lynnerang">Lynne Rang</a>.
 
 This project is a Turing cross-pollination project between students of the frontend and backend programs, primarily focused on working with React and ActionCable websockets implementation on the frontend and Ruby on Rails and ActionCable websockets definition on the back-end.
 
-This app is based on the game Code Names from the Hitchhikers Guide to the Galaxy novel (with an added Archer theme), and it allows four players to join a game from four different client machines and play against each other on two teams.
+This app is based on the CodeNames board game (along with an added Archer theme), and it allows four players to join a game from four different client machines and play against each other on two teams.
 
 
 ## Screenshots
@@ -32,7 +34,7 @@ This app is based on the game Code Names from the Hitchhikers Guide to the Galax
 
 ## Getting Started
 
-You can view this application live on Heroku at: https://codewords-ui.herokuapp.com/ !
+You can view this application live on Heroku at: playcodewords.com !
 
 OR
 

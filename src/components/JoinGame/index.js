@@ -52,11 +52,12 @@ class JoinGame extends Component {
               />
             </div>
             <div>
-              <label htmlFor="inviteCode">Choose your agent name</label>
+              <label htmlFor="name">Choose your agent name</label>
               <input
                 name="name"
                 type="text"
                 placeholder="Enter Name"
+                maxLength="15"
                 onChange={this.handleChange}
               />
             </div>

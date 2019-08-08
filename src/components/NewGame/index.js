@@ -51,6 +51,7 @@ class NewGame extends Component {
               <input 
                 name="name" 
                 value={name} 
+                maxLength="15"
                 onChange={ this.handleChange }
                 type="text" 
                 placeholder="Enter Name" />

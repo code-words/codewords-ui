@@ -67,7 +67,7 @@ const Lobby = ({ players, inviteCode, isLobbyFull }) => {
   
   const messageCls = players.length === 4 ? 'Active' : '';
 
-  const button = !isLobbyFull ? null
+  const button = players.length < 4 ? null
     : <Link className="btn-default continue-btn" to="/game">Continue</Link>;
   
   return (

@@ -26,7 +26,7 @@ class AgentInput extends Component {
 	handleSendEvent(e) {
 		e.preventDefault();
 		const { hintWord, numCards } = this.state;
-		let hint = { hintWord, numCards };
+		let hint = { hintWord: hintWord.toLowerCase(), numCards };
 
 		this.props.cable.sendHint(hint);
 		this.setState({ hintWord: '', numCards: 1 });
@@ -69,7 +69,8 @@ class AgentInput extends Component {
 					<input
 						name="hintWord"
 						onKeyPress={e => this.handleChatInputKeyPress(e)}
-						value={this.state.hint}
+            value={this.state.hint}
+            maxLength="15"
 						onChange={e => this.handleChange(e)}
 						type="text"
 						placeholder="Enter your hint..."

@@ -1,0 +1,48 @@
+
+.replay-dialog {
+  background: $button-hover;
+  border: 5px inset rgb(93, 94, 101);
+  height: auto;
+  width: 500px;
+  padding: 30px;
+
+  .replay-heading {
+    margin-bottom: 20px;
+    color: white;
+    font-size: 40px;
+  }
+
+  .winner-img {
+    border-radius: 10px;
+    width: 250px;
+    margin: 30px;
+    padding: 5px;
+    border: 1px solid black;
+  }
+
+  .replay-btns {
+    display: flex;
+    margin-top: 30px;
+    align-self: flex-end;
+
+    .start-over-btn,
+    .replay-btn {
+      padding: 5px 15px;
+      margin-left: 15px;
+
+      &:hover {
+        background: $player-active;
+        color: black;
+      }
+    }
+
+    .start-over-btn {
+      background: transparent;
+      border: 1px solid white;
+    }
+
+    .replay-btn {
+      font-weight: 600;
+    }
+  }
+}

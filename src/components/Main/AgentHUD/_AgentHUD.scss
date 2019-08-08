@@ -29,3 +29,18 @@ strong {
   color: $player-active;
 
 }
+
+.pass {
+  padding: 5px 5px;
+  font-size: 14px;
+  color: white;
+  background: $button-default;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-shadow: black 1.5px 1.5px 2px;
+
+  &:hover {
+    background: $player-active;
+    cursor: pointer;
+  }
+}
