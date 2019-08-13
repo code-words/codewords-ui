@@ -21,12 +21,23 @@
   padding: 30px;
   box-shadow: 8px 8px 10px $overlay-filter;
 
+  .divider {
+    content: "";
+    height: 2px;
+    width: 100%;
+    border: 1px inset gray;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
   h2 {
     margin: 0 0 10px 30px;
     text-shadow: 2px 2px 3px black;
   }
 
-  h2, h3, h5 {
+  h2, h4, h5 {
     font-family: $header-font;
   }
 }
@@ -52,7 +63,10 @@
   width: 25%;
 
   p {
-    border: dashed lime 2px;
     height: 25vh;
+  }
+
+  h4 {
+    color: black;
   }
 }
