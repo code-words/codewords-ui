@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import Header from '../Header';
 import StartScreen from '../StartScreen';
 import RuleList from '../RuleList';
+import AboutDevs from '../AboutDevs';
 import NewGame from '../NewGame';
 import JoinGame from '../JoinGame';
 import Lobby from '../Lobby';
@@ -243,6 +244,7 @@ export class App extends Component {
 				<Switch>
 					<Route exact path="/" component={StartScreen} />
 					<Route exact path="/rules" component={RuleList} />
+					<Route path="/about" component={AboutDevs} />
 					<Route exact path="/new" render={
             /* istanbul ignore next */
             () => <NewGame handleUserInit={this.handleUserInit} />} />
