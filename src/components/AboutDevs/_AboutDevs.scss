@@ -1,0 +1,58 @@
+// ** TEMP
+.dev-pic {
+  content: "";
+  background: $intel-assassin-accent;
+  height: 75px;
+  width: 75px;
+  margin: 5px auto;
+  border-radius: 50%;
+}
+
+.AboutDevs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: $intel-assassin;
+  position: relative;
+  left: 10vw;
+  top: 10vh;
+  height: 70vh;
+  width: 75vw;
+  padding: 30px;
+  box-shadow: 8px 8px 10px $overlay-filter;
+
+  h2 {
+    margin: 0 0 10px 30px;
+    text-shadow: 2px 2px 3px black;
+  }
+
+  h2, h3, h5 {
+    font-family: $header-font;
+  }
+}
+
+.devs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 85%;
+  width: 100%;
+}
+
+.dev {
+  display: grid;
+  grid-auto-flow: dense;
+  background: $button-default;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px $overlay-filter;
+  color: black;
+  padding: 20px;
+  margin: 30px;
+  height: 80%;
+  width: 25%;
+
+  p {
+    border: dashed lime 2px;
+    height: 25vh;
+  }
+}
