@@ -9,6 +9,9 @@ const Header = () => {
         <h1 className="header-title">CodeWords</h1>
       </div>
       <nav className="header-right">
+        <NavLink to="/about" className="nav-item rules-nav">
+          About
+        </NavLink>
         <NavLink to="/rules" className="nav-item rules-nav">
           <i className="fas fa-question-circle"/>
         </NavLink>
