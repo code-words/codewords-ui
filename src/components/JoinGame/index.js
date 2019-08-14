@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { API_ROOT, HEADERS } from "../../variables";
-import { Redirect } from "react-router-dom";
+import { Redirect, withRouter } from "react-router-dom";
 
 class JoinGame extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props);
     this.state = {
       inviteCode: "",
       name: "",
@@ -12,7 +12,7 @@ class JoinGame extends Component {
     };
   }
 
-  handleSubmit = (e) => {
+  handleSubmit = e => {
     e.preventDefault();
     let { name, inviteCode } = this.state;
 
@@ -23,25 +23,30 @@ class JoinGame extends Component {
     };
     fetch(`${API_ROOT}/v1/games/${inviteCode}/players`, option)
       .then(response => response.json())
-      .then(result => { 
-        this.props.handleUserInit(result, inviteCode) 
+      .then(result => {
+        this.props.handleUserInit(result, inviteCode);
       });
 
     this.setState({ redirect: true });
-  }
+  };
 
-  handleChange = (e) => {
-    const { name, value } = e.target; 
-    this.setState({ [name]: value })
-  }
+  handleChange = e => {
+    const { name, value } = e.target;
+    this.setState({ [name]: value });
+  };
 
   render() {
-    if (this.state.redirect) { return <Redirect to='/lobby' /> };
-
+    if (this.state.redirect) {
+      return <Redirect to="/lobby" />;
+    }
 
     return (
       <div className="backdrop">
         <section className="StartScreen">
+          <i
+            className="fas fa-arrow-alt-circle-left"
+            onClick={() => this.props.history.goBack()}
+          />
           <form className="JoinGame" onSubmit={this.handleSubmit}>
             <h2>Friends started a game?</h2>
             <div>
@@ -77,4 +82,4 @@ class JoinGame extends Component {
   }
 }
 
-export default JoinGame;
+export default withRouter(JoinGame);

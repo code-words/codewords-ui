@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AboutDevs = () => {
+const AboutDevs = (props) => {
   const devs = [
     {
       name: "Jon Peterson",
@@ -60,12 +60,12 @@ const AboutDevs = () => {
 
   return (
     <div className="AboutDevs">
+      <i className="fas fa-arrow-alt-circle-left" 
+        onClick={() => props.history.goBack()} />
       <h2>Top Secret Case Files:</h2>
-      <section className="devs">
-        {renderDevs()}
-      </section>
+      <section className="devs">{renderDevs()}</section>
     </div>
-  )
+  );
 }
 
 export default AboutDevs;
