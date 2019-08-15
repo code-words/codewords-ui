@@ -27,6 +27,20 @@ html {
 @import '../components/ConfDialog/ConfDialog';
 @import '../components/ReplayScreen/ReplayScreen';
 
+#back {
+  color: $button-default;
+  text-shadow: 2px 2px 1px $intel-assassin-accent;
+  position: absolute;
+  top: 2vh;
+  left: 1vw;
+  font-size: 22px;
+
+  &:hover {
+    color: $player-active;
+    cursor: pointer;
+  }
+}
+
 body {
   margin: 0;
   height: 100vh;
