@@ -40,6 +40,7 @@ class NewGame extends Component {
       <div className="backdrop">
         <section className="StartScreen">
           <i
+            id="back"
             className="fas fa-arrow-alt-circle-left"
             onClick={() => this.props.history.goBack()}
           />

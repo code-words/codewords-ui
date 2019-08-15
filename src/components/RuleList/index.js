@@ -5,6 +5,7 @@ const RuleList = (props) => {
     <div className="backdrop">
       <section className="StartScreen">
         <i
+          id="back"
           className="fas fa-arrow-alt-circle-left"
           onClick={() => props.history.goBack()}
         />
