@@ -11,7 +11,7 @@
 * [License](#License)
 
 
-# CodeWords [![Build Status](https://travis-ci.com/code-words/codewords-ui.svg?branch=master)](https://travis-ci.com/code-words/codewords-ui)
+# CodeWords [![Build Status](https://travis-ci.com/code-words/codewords-ui.svg?branch=master)](https://travis-ci.com/code-words/codewords-ui)[![GitHub issues](https://img.shields.io/github/issues/code-words/codewords-ui)](https://github.com/code-words/codewords-ui/issues)
 
 This app was created by <a href="https://github.com/joequincy">Jon Peterson</a>, <a href="https://github.com/rdren0">Rachael Drennan</a>, <a href="https://github.com/siimonstark">Justin Pyktel</a>, and <a href="https://github.com/lynnerang">Lynne Rang</a>.
 
