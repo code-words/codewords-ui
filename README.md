@@ -21,12 +21,11 @@ This app is based on the CodeNames board game (along with an added Archer theme)
 
 
 ## Screenshots
-
-![New game](/screenshots/1.png)
-![Lobby](/screenshots/2.png)
-![Gameplay as hinter](/screenshots/3.png)
-![Gameplay as guesser](/screenshots/4.png)
-![Mid-game](/screenshots/5.png)
+<img src="/screenshots/1.png" alt="New Game" style="float: left; margin-right: 10px;" width="200" />
+<img src="/screenshots/2.png" alt="Lobby" style="float: left; margin-right: 10px;" width="200" />
+<img src="/screenshots/3.png" alt="Gameplay_Hinter" style="float: left; margin-right: 10px;" width="200" />
+<img src="/screenshots/4.png" alt="Gameplay_Guesser" style="float: left; margin-right: 10px;" width="200" />
+<img src="/screenshots/5.png" alt="Mid Game" style="float: left; margin-right: 10px;" width="200" />
 
 - [Youtube Link](https://youtu.be/CDS2_IoZ0hw)
 
