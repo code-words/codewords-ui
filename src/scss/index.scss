@@ -14,6 +14,7 @@ html {
 @import '../components/Header/Header';
 @import '../components/StartScreen/StartScreen';
 @import '../components/RuleList/RuleList';
+@import '../components/AboutDevs/AboutDevs';
 // @import '../components/NewGame/NewGame';
 @import '../components/JoinGame/JoinGame';
 @import '../components/Lobby/Lobby';
@@ -25,6 +26,20 @@ html {
 @import '../components/Main/AgentHUD/AgentHUD';
 @import '../components/ConfDialog/ConfDialog';
 @import '../components/ReplayScreen/ReplayScreen';
+
+#back {
+  color: $button-default;
+  text-shadow: 2px 2px 1px $intel-assassin-accent;
+  position: absolute;
+  top: 2vh;
+  left: 1vw;
+  font-size: 22px;
+
+  &:hover {
+    color: $player-active;
+    cursor: pointer;
+  }
+}
 
 body {
   margin: 0;

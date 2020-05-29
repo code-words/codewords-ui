@@ -18,7 +18,7 @@ describe('Card', () => {
 		expect(wrapper).toMatchSnapshot();
 	});
   it('sendGuess should be called on click of the card', () => {
-    wrapper = shallow(<Card card={{ type: 'bystander' }} sendGuess={mockFn} isActive={true} card={{ type: false }} />);
+    wrapper = shallow(<Card sendGuess={mockFn} isActive={true} card={{ type: false }} />);
 		jest.spyOn(wrapper.instance(), 'handleClick');
     let mockEvent = { target: { value: '', name: 'title' }, currentTarget: {value: 3} };
     

@@ -4,6 +4,12 @@
   justify-content: space-between;
   align-items: center;
   margin: 0 20px;
+  position: relative;
+  z-index: 99;
+
+  .header-left {
+    cursor: pointer;
+  }
 
   .header-title {
     color: white;
@@ -14,6 +20,8 @@
     display: flex;
     color: white;
     align-items: center;
+
+    
 
     .new-game-btn {
       margin-left: 30px;
@@ -35,4 +43,10 @@
       color: $player-active;
     }
   }
+}
+
+.label {
+  position: absolute;
+  left: 2%;
+  background: $button-default;
 }

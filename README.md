@@ -1,14 +1,16 @@
 
 
 ## Table of contents
-* [Intro](#CodeWords)
-* [Screenshots](#Screenshots)
-* [Getting Started](#Getting-Started)
-* [How to Use](#How-to-Use)
-* [Project Emphasis](#Project-Emphasis)
-* [UI Design](#UI-Design)
-* [Future Plans](#Future-Plans)
-* [License](#License)
+- [CodeWords ![Build Status](https://travis-ci.com/code-words/codewords-ui)](#codewords-build-statushttpstravis-cicomcode-wordscodewords-ui)
+  - [Screenshots](#screenshots)
+  - [Getting Started](#getting-started)
+  - [How to Use](#how-to-use)
+  - [UI Design](#ui-design)
+  - [Future Plans](#future-plans)
+  - [Project Emphasis](#project-emphasis)
+    - [Front-End](#front-end)
+    - [Back-end](#back-end)
+  - [Licensing](#licensing)
 
 
 # CodeWords [![Build Status](https://travis-ci.com/code-words/codewords-ui.svg?branch=master)](https://travis-ci.com/code-words/codewords-ui)[![GitHub issues](https://img.shields.io/github/issues/code-words/codewords-ui)](https://github.com/code-words/codewords-ui/issues)

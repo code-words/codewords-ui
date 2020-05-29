@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import {API_ROOT, HEADERS} from '../../variables'
-import { Redirect } from 'react-router-dom';
+import { Redirect, withRouter } from "react-router-dom";
 import PropTypes from 'prop-types';
 
 class NewGame extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state= {
       name: '',
       redirect: false
@@ -39,34 +39,35 @@ class NewGame extends Component {
     return (
       <div className="backdrop">
         <section className="StartScreen">
-          <form 
-            className="JoinGame"
-            onSubmit={this.handleSubmit}
-          >
+          <i
+            id="back"
+            className="fas fa-arrow-alt-circle-left"
+            onClick={() => this.props.history.goBack()}
+          />
+          <form className="JoinGame" onSubmit={this.handleSubmit}>
             <h2>Creating a new game?</h2>
             <div>
-              <label htmlFor="name">
-                Choose your agent name
-                </label>
-              <input 
-                name="name" 
-                value={name} 
+              <label htmlFor="name">Choose your agent name</label>
+              <input
+                name="name"
+                value={name}
                 maxLength="15"
-                onChange={ this.handleChange }
-                type="text" 
-                placeholder="Enter Name" />
+                onChange={this.handleChange}
+                type="text"
+                placeholder="Enter Name"
+              />
             </div>
-            <input 
+            <input
               className="btn-default start-btn"
-              type="submit" 
-              disabled={ !name }
+              type="submit"
+              disabled={!name}
               value="CREATE GAME"
               onClick={this.handleSubmit}
             />
           </form>
         </section>
       </div>
-    )
+    );
   }
 }
 
@@ -74,4 +75,4 @@ NewGame.propTypes = {
   handleUserInit: PropTypes.func
 }
 
-export default NewGame;
+export default withRouter(NewGame);
