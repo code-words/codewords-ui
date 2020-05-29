@@ -37,12 +37,12 @@ export class App extends Component {
     };
   }
 
-  handleUserInit = result => {
+  handleUserInit = (result, inviteCode) => {
     const { id, name, token } = result;
     localStorage.setItem("Token", token);
     const user = { id, name, token }
-    if (result.invite_code) this.setState({ invite_code: result.invite_code });
-    this.setState({ user }, () => this.createCable(token));
+    // if (result.invite_code) this.setState({ invite_code: result.invite_code });
+    this.setState({ user, invite_code: inviteCode || result.invite_code }, () => this.createCable(token));
   };
 
   updateHintLogs = data => {
@@ -140,6 +140,31 @@ export class App extends Component {
     }
   }
 
+  closeReplay = () => {
+    this.setState({
+      user: {},
+      invite_code: '',
+      playerRoster: [],
+      hintLogs: [],
+      cardData: [],
+      cable: {},
+      isLobbyFull: false,
+      currentPlayerId: null,
+      remainingAttempts: null,
+      winner: "",
+      currentHint: {
+        hintWord: "",
+        relatedCards: null
+      },
+      showDialog: false,
+      confMsg: ""
+    });
+  }
+
+  finishGame = (code) => {
+    this.setState({invite_code: code});
+  }
+
 	dataSwitch = result => {
     const { type, data } = result;
 		switch (type) {
@@ -156,9 +181,8 @@ export class App extends Component {
         this.setGuess(data);
         break;
       case 'game-over':
-        console.log(data)
         this.setGuess(data);
-        // add resetting of invite code from response and resetting of some state properties
+        this.finishGame(data.nextGame);
         setTimeout(() => this.setState({ winner: data.winningTeam}), 2500);
         break;
       case 'illegal-action':
@@ -194,10 +218,16 @@ export class App extends Component {
   };
   
   render() {
-    const { showDialog, cardData, confMsg } = this.state;
+    const { showDialog, cardData, confMsg, user, invite_code } = this.state;
 
-    const replay = !this.state.winner ? null
-      : < ReplayScreen winner={this.state.winner} closeReplay={() => this.setState({winner: ''})}/>
+    const replay = !this.state.winner ? null : (
+      <ReplayScreen
+        winner={this.state.winner}
+        userData={{ name: user.name, inviteCode: invite_code }}
+        handleUserInit={this.handleUserInit}
+        closeReplay={this.closeReplay}
+      />
+    );
 
     const dialog = showDialog ? <ConfDialog
       message={confMsg}
